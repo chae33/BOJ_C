@@ -1,0 +1,49 @@
+//2739
+#include <stdio.h>
+int main(){
+	int a;
+	scanf("%d", &a);
+	for(int i=1; i<=9; i++)
+	{
+		printf("%d * %d = %d\n", a, i, a*i);
+	}
+}
+
+//10950
+#include <stdio.h>
+int main(){
+	int a, b, c;
+	scanf("%d", &c);
+	for(int i=0; i<=c; i++)
+	{
+		scanf("%d %d", &a, &b);
+		printf("%d\n", a+b);
+	}
+}
+
+//8393
+#include <stdio.h>
+int main()
+{
+	int input = 0;
+	int sum = 0;
+	scanf("%d", &input);
+	for(int i=1; i<=input; i++)
+	{
+		sum+= i;
+	}
+	printf("%d", sum);
+}
+
+//15552
+#include <stdio.h>
+int main(){
+	int c;
+	scanf("%d", &c);
+	for(int i=0; i<=c; i++)
+	{
+		int a,b;
+		scanf("%d %d", &a, &b);
+		printf("%d\n", a+b);
+	}
+}
