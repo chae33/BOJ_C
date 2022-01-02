@@ -1,0 +1,53 @@
+//2741
+#include <stdio.h>
+ 
+int main() {
+    int i, n;
+    
+    scanf("%d", &n);
+    
+    for ( i = 1; i <= n; i++ ) {
+    	printf("%d\n", i);
+    }
+}
+
+//2742
+#include <stdio.h>
+ 
+int main() {
+    int i, n;
+    
+    scanf("%d", &n);
+    
+    for ( i = n; i > 0; i-- ) {
+    	printf("%d \n", i);
+    }
+}
+
+//11021
+#include <stdio.h>
+ 
+int main() {
+    int i, t, a, b;
+    
+    scanf("%d", &t);
+    
+    for ( i = 1; i <= t; i++ ) {
+    	scanf("%d %d", &a, &b);
+    	printf("Case #%d: %d \n", i, a+b);
+    }
+}
+
+//11022
+#include <stdio.h>
+ 
+int main() {
+    int i, t, a, b;
+    
+    scanf("%d", &t);
+    
+    for ( i = 1; i <= t; i++ ) {
+    	scanf("%d %d", &a, &b);
+    	printf("Case #%d: %d + %d = %d \n", i, a, b, a+b);
+    }
+}
