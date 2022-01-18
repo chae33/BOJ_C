@@ -1,0 +1,45 @@
+//10952
+
+#include<stdio.h>
+int main(){
+    int a, b;
+    scanf("%d%d", &a, &b);
+    while(a != 0 || b != 0){
+        printf("%d\n", a+b);
+        scanf("%d%d", &a, &b);
+    }
+}
+
+
+//10951
+
+#include<stdio.h>
+int main (){
+    int a, b;
+    while(~scanf("%d%d", &a, &b)){
+        printf("%d\n", a+b);
+    }
+}
+
+
+//1110
+
+#include<stdio.h>
+int main(){
+    int N;
+    int count = 0;
+    scanf("%d", &N);
+    int num = N;
+    if(num < 10){  // 처음 수를 받고 10 이하인지 판별
+        num = (num * 10) + num;
+        count++;
+    } else {
+        num = (num % 10) * 10 + ((num / 10) + (num % 10)) % 10;
+        count++;
+    }
+    while(num != N){
+        num = (num % 10) * 10 + ((num / 10) + (num % 10)) % 10; // 안에서 식을 돌림
+        count++;
+    }
+    printf("%d", count);
+}
