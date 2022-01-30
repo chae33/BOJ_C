@@ -1,0 +1,60 @@
+//10818
+
+#include <stdio.h>
+
+int main() {
+	int n, i;
+	scanf("%d", &n);
+	
+	int a[n];
+	int max = -1000000;
+	int min = 1000000;
+	for( i = 0; i < n; i++ ) {
+		scanf("%d", &a[i]);
+		if( max < a[i]) max = a[i];
+		if( min > a[i]) min = a[i];
+	}
+	printf("%d %d", min, max);
+}
+
+//2562
+#include <stdio.h>
+
+int main() {
+	int max = 0, i, n;
+	int a[9];
+	
+	for( i = 0; i < 9; i++ ) {
+		scanf("%d", &a[i]);
+		
+		if( max < a[i]) { 
+			max = a[i];
+			n = i;
+		}
+	}
+	printf("%d \n%d", max, n+1);
+}
+
+//2577
+#include <stdio.h>
+
+int main() {
+	int a, b, c, z, i, o;
+	int n[10] = {0}; 
+	
+	scanf("%d", &a);
+	scanf("%d", &b);
+	scanf("%d", &c);
+	
+	z = a * b * c;
+	
+	while( z != 0 ) {
+		o = z%10;
+		n[o] += 1;
+		z /= 10;
+	}
+	
+	for( i = 0; i < 10; i++ ) {
+		printf("%d\n", n[i]);
+	}
+}
