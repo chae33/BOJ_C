@@ -1,0 +1,41 @@
+//11654
+include <stdio.h>
+int main()
+{
+	char c;
+	scanf("%c", &c);
+	printf("%d", c);
+}
+
+//11720
+#include <stdio.h>
+void main() {
+    int input, i, sum = 0;
+    char a[101] = {};
+    scanf("%d", &input);
+    scanf("%s", a);
+    
+    for(i = 0; i < input; i++)
+        sum += a[i] - 48;
+    printf("%d", sum);
+}
+
+//10809
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char s[100] = {0};
+    int cnt = 0;
+ 
+    scanf("%s",&s);
+
+        for (int i = 97; i <= 122; i++){
+            for(int j = 0; j<100; j++){
+                if((int)s[j] == i){break;}
+                cnt++;
+            }
+            if(cnt != 100){printf("%d ",cnt);}
+            else{printf("-1 ");}
+            cnt = 0;
+        }
+}
