@@ -1,0 +1,77 @@
+//2675
+
+#include <stdio.h>
+#include <string.h>
+ 
+int main() {
+    int T, R;
+    char S[21];
+    
+    scanf("%d", &T);
+    //T만큼의 테스트케이스
+    while (T--) {
+        scanf("%d %s", &R, S);
+        
+        //결과를 출력하기 위한 반복문
+        for (int i = 0; i < strlen(S); i++) {
+            for (int j = 0; j < R; j++)
+                printf("%c", S[i]);
+        }
+ 
+        printf("\n");
+    }
+    return 0;
+}
+
+//1157
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+int cnt = 0, mcnt = 0;
+char S[1000000], ma;
+scanf("% s", S);
+for (int i = 'a'; i <= 'z'; i++) {
+for (int j = 0; j < strlen(S); j++) {
+if (S[j] == i || S [j] == i - 32)
+cnt++;
+}
+
+if (mcnt < cnt) {
+mcnt = cnt;
+ma = i;
+if (ma >= 97)
+ma -= 32;
+}
+else if (mcnt == cnt)
+ma = '?';
+
+cnt = 0;
+}
+printf("%c", ma);
+}
+
+//1152
+#include <stdio.h>
+#include <string.h>
+
+int main(void){
+  
+  char arr[1000000]; 
+  int i,cnt=0,len;
+
+  scanf("%[^\n]",arr);
+  len = strlen(arr);
+  if (len == 1){
+      printf("0\n");
+      return 0;
+    }
+  }
+
+  for(i = 1; i<len-1; i++){
+    if( arr[i] == ' '){
+      cnt++;
+    }
+  }
+  printf("%d", cnt+1);
+}
