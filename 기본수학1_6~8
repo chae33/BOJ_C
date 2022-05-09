@@ -1,0 +1,99 @@
+//2775
+
+#include <stdio.h>
+int main(){
+
+  int arr[15][15] = {0,};
+  int test,h,w;
+
+  for(int i=0; i<15; i++){
+    arr[0][i] = i;
+  }
+  
+  for(int i=1; i<15; i++){
+    for(int j=1; j<15; j++){
+      arr[i][j] = arr[i-1][j] + arr[i][j-1];
+    }
+  }
+
+  scanf("%d",&test); 
+  
+  for(int i=0;i<test;i++){
+    scanf("%d %d", &h, &w);  
+    printf("%d\n", arr[h][w]);  
+  }
+
+	return 0; 
+}
+
+
+//2839
+
+#include<stdio.h>
+int main(){
+	int user;
+	int count = 0; 
+	
+	scanf("%d", &user);
+	
+	while(user > 0){
+		if(user % 5 == 0){
+			user -=5;
+			count++;
+		}
+		else if(user % 3 ==0){
+			user -=3;
+			count++;
+		}
+		else if(user > 5){
+			user -=5;
+			count++;
+		}
+		else{
+			count = -1; 
+			break;
+		}
+		
+	}
+	printf("%d", count);
+}
+
+//10757
+
+#include <stdio.h>
+#include <string.h>
+
+char a[10001];
+char b[10001];
+int ans[10001]; 
+int a_len, b_len;
+
+int main() {
+    scanf("%s %s", a, b);
+    
+    a_len = strlen(a) - 1;
+    b_len = strlen(b) - 1;
+    
+    int x, y, temp, c = 0;
+
+    while(a_len >=0 || b_len >=0) {
+        
+        x = (a_len>=0)?(a[a_len]-'0'):0;
+        y = (b_len>=0)?(b[b_len]-'0'):0;
+        
+        temp = ans[c] + x + y;
+
+        ans[c] = temp%10;
+        ans[c + 1] = temp/10;
+        
+        c++;
+        a_len--;
+        b_len--;
+    }
+    
+    if(ans[c] == 0)
+        c--;
+   
+    for(;c>=0;c--)
+    printf("%d", ans[c]);
+}
