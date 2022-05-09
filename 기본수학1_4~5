@@ -1,0 +1,54 @@
+//2869
+
+#include <stdio.h>
+int main() {
+
+	int A, B, V;
+	int day, almost, answer,howmany;
+	
+	scanf("%d", &A);
+	scanf("%d", &B);
+	scanf("%d", &V);
+
+	if (A == V) {
+		printf("%d", 1);
+		return 0;
+	}
+
+	day = A - B;
+	almost = V - A;
+	if (almost % day)
+
+		howmany = (almost / day )+ 1;
+	else
+		howmany = almost / day;
+		
+	answer = howmany + 1;
+
+	printf("%d\n", answer);
+
+	return 0;
+}
+
+//10250
+
+#include <stdio.h>
+int main(){
+
+	int t, h, w, n; 
+	int count; 
+	scanf("%d", &t);
+
+	for (int i = 0; i < t; i++) {
+    count = 1; 
+		scanf("%d %d %d", &h, &w, &n);
+		while (n > h) { 
+			n -= h;       
+			count++;
+		}
+		printf("%d%02d\n", n, count);
+	}
+
+
+	return 0; 
+}
